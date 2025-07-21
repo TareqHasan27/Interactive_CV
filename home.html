@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio CV</title>
+    <title>Tareq Hasan Portfolio</title>
+    <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="bg-animation">
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+            <div class="bg-circle"></div>
+        </div>
+
+        <div class="left-section">
+            <img src="/1695049131844.JPG" alt="Profile Photo" class="profile-image" id="profileImage">
+        </div>
+
+        <div class="right-section">
+            <div class="intro-text">
+                <h1 class="greeting">Hi!, I'm <span class="name">Mehedi Hasan Tareq</span></h1>
+                <p class="role">A Learner.</p>
+                <p class="description">
+                    Welcome to my portfolio. I am Tareq, an ambitious undergraduate student with a passion for problem
+                    solving and development.
+                </p>
+                <a href="#" class="download-btn" onclick="downloadCV()">
+                    <span>Download CV</span>
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12 15.577l-3.539-3.538.707-.708L11.5 13.672V4h1v9.672l2.332-2.341.707.708L12 15.577z" />
+                        <path d="M20 18H4v-1h16v1z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-tooltip="Home" onclick="navigateToSection('home')">
+                <svg viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                </svg>
+            </button>
+
+            <button class="nav-btn" data-tooltip="About Me" onclick="navigateToSection('about' , event)">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                </svg>
+            </button>
+
+            <button class="nav-btn" data-tooltip="My Projects" onclick="navigateToSection('projects' , event)">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M22,9V7h-2V5c0-1.1-0.9-2-2-2H4C2.9,3,2,3.9,2,5v2H0v2h2v2H0v2h2v2H0v2h2v2c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-2h2v-2h-2v-2h2v-2h-2V9H22z M18,5v14H4V5H18z" />
+                    <path d="M6 7h10v2H6zM6 11h10v2H6zM6 15h7v2H6z" />
+                </svg>
+            </button>
+
+            <button class="nav-btn" data-tooltip="My Blogs" onclick="navigateToSection('blogs' , event)">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+                </svg>
+            </button>
+
+            <button class="nav-btn" data-tooltip="Contact Me" onclick="navigateToSection('contact' , event)">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
 </body>
+   <script src="home.js"></script>
 </html>
