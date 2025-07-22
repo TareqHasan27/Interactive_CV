@@ -54,8 +54,8 @@ body {
 }
 
 .profile-image {
-    width: 300px;
-    height: 400px;
+    width: 500px;
+    height: 600px;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
@@ -184,9 +184,9 @@ body {
 }
 
 .nav-btn:hover {
-    background: #ff8c00;
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+    background: #2c3e50;
+    transform: scale(1.25);
+    box-shadow: 0 8px 25px rgba(96, 91, 86, 0.4);
 }
 
 .nav-btn svg {
