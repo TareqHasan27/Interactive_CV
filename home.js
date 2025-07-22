@@ -45,7 +45,7 @@ style.textContent = `
     .nav-btn.active {
         background: #ff8c00 !important;
         transform: scale(1.1);
-        box-shadow: 0 8px 25px rgba(255,140,0,0.4);
+        box-shadow: 0 8px 25px rgba(167, 150, 129, 0.4);
     }
 `;
 document.head.appendChild(style);
