@@ -567,6 +567,7 @@ body {
     display: grid flex;
     gap: 2rem;
     margin-bottom: 4rem;
+    animation: slideIn 1.3s ease-out;
 }
 
 .project-card {
@@ -612,24 +613,6 @@ body {
     font-size: 4rem;
 }
 
-.view {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #1a1818;
-}
-
-
-.social-icons a {
-    background-color: white;
-    padding: 12px;
-    border-radius: 50%;
-    font-size: 18px;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    width: 70px;
-    height: 70px;
-}
 
 
 .project-image {
@@ -655,15 +638,15 @@ body {
 }
 
 /* my blogs page */
-/* Grid container */
+
 .hobbies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
+    animation: fadeInDown 1s ease-out 0.2s both;
 }
 
-/* Hobby Card */
 .hobby-card {
     background-color: #fff;
     border-radius: 12px;
@@ -679,7 +662,6 @@ body {
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Image - fix sizing */
 .hobby-image {
     width: 100%;
     height: 220px;
@@ -693,12 +675,10 @@ body {
     display: block;
 }
 
-/* Content */
 .hobby-content {
     padding: 20px;
 }
 
-/* Title */
 .hobby-title {
     font-size: 1.5rem;
     font-weight: bold;
@@ -720,7 +700,6 @@ body {
     border-radius: 2px;
 }
 
-/* Description */
 .hobby-description {
     font-size: 1rem;
     line-height: 1.6;
@@ -728,7 +707,168 @@ body {
     text-align: left;
 }
 
+/* contact me page */
 
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.contact-me-left-section {
+    padding-right: 20px;
+    animation: fadeInUp 1s ease-out 0.2s both;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #495057;
+    margin-bottom: 30px;
+}
+
+.contact-description {
+    font-size: 1.1rem;
+    color: #6c757d;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.contact-icon {
+    font-size: 20px;
+    color: #333;
+    margin-right: 10px;
+    width: 25px;
+    display: inline-block;
+}
+
+.contact-label {
+    font-weight: bold;
+    color: #495057;
+    min-width: 100px;
+    margin-right: 15px;
+}
+
+.contact-value {
+    color: #0f0f10;
+    flex: 1;
+}
+
+.social-media {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.social-link {
+    display: inline-block;
+    margin: 0 10px;
+    width: 45px;
+    height: 45px;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 45px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+    background-color: #e94d1d;
+    color: white;
+}
+
+
+/* contact me form section */
+
+.contact-right-section {
+    padding-left: 20px;
+    animation: slideIn 0.5s ease-out;
+}
+
+.contact-form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #495057;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #ff8c00;
+    background-color: white;
+}
+
+.form-input::placeholder {
+    color: #adb5bd;
+    font-size: 0.95rem;
+}
+
+.form-textarea {
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background: #ff8c00;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background: #e07b00;
+    transform: translateY(-2px);
+}
+
+.submit-btn::after {
+    content: '▶▶';
+    font-size: 0.8rem;
+}
 
 
 
@@ -868,5 +1008,8 @@ body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
+    /* contact me responsive */
+    .content {
+        grid-template-columns: 1fr;
+    }
 }

@@ -12,8 +12,8 @@ function navigateToSection(section) {
         case 'my blogs':
             window.location.href = 'my_blogs.html';
             break;
-        default:
-            alert('Section not implemented yet.');
+        case 'contact me':
+            window.location.href = 'contact_me.html';
             break;
     }
 }
@@ -71,6 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'my blogs':
                 targetFile = 'my_blogs.html';
+                break;
+            case 'contact me':
+                targetFile = 'contact_me.html';
                 break;
         }
 
