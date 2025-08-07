@@ -9,6 +9,9 @@ function navigateToSection(section) {
         case 'my projects':
             window.location.href = 'my_projects.html';
             break;
+        case 'my blogs':
+            window.location.href = 'my_blogs.html';
+            break;
         default:
             alert('Section not implemented yet.');
             break;
@@ -65,6 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'my projects':
                 targetFile = 'my_projects.html';
+                break;
+            case 'my blogs':
+                targetFile = 'my_blogs.html';
                 break;
         }
 
