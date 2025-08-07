@@ -1,24 +1,197 @@
- * {
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
- }
+/* Global Reset  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- body {
-     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-     min-height: 100vh;
-     color: #2c3e50;
- }
+/* Base Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    color: #2c3e50;
+    overflow-x: hidden;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
 
- .container {
+
+ /* download btn */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #ff8c00, #ff6b35);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
+    animation: slideInRight 1s ease-out 0.6s both;
+    text-decoration: none;
+}
+
+.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+    background: linear-gradient(45deg, #ff6b35, #ff8c00);
+}
+
+.download-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Navigation Buttons */
+
+.home-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.nav-buttons {
+    position: fixed;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000;
+}
+
+.nav-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #2c3e50;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-btn:hover {
+    background: #2c3e50;
+    transform: scale(1.25);
+    box-shadow: 0 8px 25px rgba(48, 46, 44, 0.4);
+}
+
+.nav-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+    z-index: 2;
+} 
+
+/* home page */
+
+/* left section styles */
+
+.left-section {
+    flex: 1;
+    background: linear-gradient(135deg, #ff8c00, #ff6b35);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 500px;
+    height: 600px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.profile-image:hover {
+    transform: scale(1.05) rotateY(5deg);
+}
+
+/* right section styles */
+.right-section {
+    flex: 1.2;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: relative;
+}
+
+.intro-text {
+    margin-bottom: 2rem;
+}
+
+.greeting {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    animation: slideInRight 1s ease-out;
+}
+
+.name {
+    color: #ff8c00;
+}
+
+.role {
+    color: #7f8c8d;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    animation: slideInRight 1s ease-out 0.2s both;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #5a6c7d;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    animation: slideInRight 1s ease-out 0.4s both;
+} 
+
+/* Home page animation */
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+} 
+
+/* about me page */
+
+.about-container {
      max-width: 1200px;
      margin: 0 auto;
      padding: 2rem;
      padding-right: 120px;
  }
 
- /* Header */
+/* Header */
  .header {
      text-align: center;
      margin-bottom: 4rem;
@@ -63,35 +236,6 @@
      margin-bottom: 2rem;
      text-align: justify;
  }
-
-.download-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: linear-gradient(45deg, #ff8c00, #ff6b35);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 140, 0, 0.3);
-    animation: slideInRight 1s ease-out 0.6s both;
-    text-decoration: none;
-}
-
-.download-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
-    background: linear-gradient(45deg, #ff6b35, #ff8c00);
-}
-
-.download-btn svg {
-    width: 20px;
-    height: 20px;
-}
 
  /* Stats Grid */
  .stats-grid {
@@ -410,49 +554,7 @@
      line-height: 1.6;
  }
 
- /* Navigation Buttons */
- .nav-buttons {
-    position: fixed;
-    right: 2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    z-index: 1000;
-}
-
-.nav-btn {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #2c3e50;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-btn:hover {
-    background: #2c3e50;
-    transform: scale(1.25);
-    box-shadow: 0 8px 25px rgba(48, 46, 44, 0.4);
-}
-
-.nav-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: white;
-    z-index: 2;
-}
-
-
- /* Animations */
+ /* About Me Page Animations */
  @keyframes fadeInDown {
      from {
          opacity: 0;
@@ -489,68 +591,59 @@
      }
  }
 
- /* Responsive Design */
- @media (max-width: 768px) {
-     .container {
-         padding: 1rem;
-         padding-right: 1rem;
-     }
 
-     .main-title {
-         font-size: 2.5rem;
-     }
 
-     .about-section {
-         grid-template-columns: 1fr;
-         gap: 2rem;
-     }
 
-     .stats-grid {
-         grid-template-columns: 1fr;
-     }
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+        padding-right: 1rem;
+    }
+    .nav-buttons {
+        right: 1rem;
+        flex-direction: row;
+        bottom: 2rem;
+        top: auto;
+        transform: none;
+    }
 
-     .timeline::after {
-         left: 31px;
-     }
+    /* home page responsive */
 
-     .timeline-item {
-         width: 100%;
-         padding-left: 70px;
-         padding-right: 25px;
-     }
+    .left-section , .right-section { padding: 2rem 1rem; }
+    .profile-image {
+        width: 250px;
+        height: 300px;
+    }
+    .greeting {
+        font-size: 2.5rem;
+    }
 
-     .timeline-item::before {
+    .role {
+        font-size: 1.5rem;
+    }
+
+    /* about me page responsive */
+
+    .main-title { font-size: 2.5rem; }
+    .about-section { grid-template-columns: 1fr; gap: 2rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .timeline::after { left: 31px; }
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    .timeline-item::before {
          left: 60px;
          border: medium solid white;
          border-width: 10px 10px 10px 0;
          border-color: transparent white transparent transparent;
      }
-
-     .timeline-item:nth-child(even) {
-         left: 0%;
-     }
-
-     .timeline-item::after {
-         left: 15px;
-     }
-
-     .timeline-item:nth-child(even)::after {
-         left: 15px;
-     }
-
-     .skills-grid {
-         grid-template-columns: 1fr;
-     }
-
-     .achievements-grid {
-         grid-template-columns: 1fr;
-     }
-
-     .nav-buttons {
-         right: 1rem;
-         flex-direction: row;
-         bottom: 2rem;
-         top: auto;
-         transform: none;
-     }
- }
+    .timeline-item::after { left: 15px; }
+    .timeline-item:nth-child(even) { left: 0%; }
+    .timeline-item:nth-child(even)::after { left: 15px; }
+    .skills-grid, .achievements-grid { grid-template-columns: 1fr; }
+    
+}
