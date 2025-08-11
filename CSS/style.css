@@ -23,7 +23,6 @@ body {
     background: linear-gradient(45deg, #ff8c00, #ff6b35);
     color: white;
     padding: 15px 30px;
-    border: none;
     border-radius: 50px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -35,7 +34,6 @@ body {
 }
 
 .download-btn:hover {
-    transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
     background: linear-gradient(45deg, #ff6b35, #ff8c00);
 }
@@ -45,13 +43,9 @@ body {
     height: 20px;
 }
 
-/* Navigation Buttons */
 
-.home-container {
-    display: flex;
-    min-height: 100vh;
-    position: relative;
-}
+
+/* Navigation Buttons */
 
 .nav-buttons {
     position: fixed;
@@ -71,7 +65,6 @@ body {
     background: #2c3e50;
     border: none;
     cursor: pointer;
-    display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
@@ -95,6 +88,12 @@ body {
 
 /* home page */
 
+.home-container {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
 /* left section styles */
 
 .left-section {
@@ -105,7 +104,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
 }
 
 .profile-image {
@@ -121,6 +119,7 @@ body {
 
 .profile-image:hover {
     transform: scale(1.05) rotateY(5deg);
+    cursor: pointer;
 }
 
 /* right section styles */
@@ -163,7 +162,7 @@ body {
     font-size: 1.1rem;
     color: #5a6c7d;
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
     max-width: 500px;
     animation: slideInRight 1s ease-out 0.4s both;
 }
@@ -604,44 +603,23 @@ body {
     opacity: 1;
 }
 
-.project-card:hover .card-front {
-    opacity: 0;
-}
 
 .card-back p {
     font-weight: bold;
     font-size: 4rem;
 }
 
-
-
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-}
-
-.project-content {
-    padding: 20px;
-}
-
-.project-title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #495057;
-    margin-bottom: 8px;
-}
-
-.project-description {
-    color: #6c757d;
-    font-size: 0.9rem;
 }
 
 /* my blogs page */
 
 .hobbies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2,  1fr);
     gap: 2rem;
     padding: 2rem;
     animation: fadeInDown 1s ease-out 0.2s both;
@@ -664,7 +642,7 @@ body {
 
 .hobby-image {
     width: 100%;
-    height: 220px;
+    height: 280px;
     overflow: hidden;
 }
 
@@ -672,7 +650,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .hobby-content {
@@ -694,8 +671,8 @@ body {
     bottom: -6px;
     left: 50%;
     transform: translateX(-50%);
-    width: 70%;
-    height: 3px;
+    width: 80%;
+    height: 4px;
     background-color: #ff8c00;
     border-radius: 2px;
 }
@@ -732,17 +709,23 @@ body {
     font-size: 1.1rem;
     color: #6c757d;
     line-height: 1.8;
+    margin: 10px;
     margin-bottom: 40px;
+    text-align: justify;
 }
-
 .contact-info {
-    list-style: none;
+    padding: 10px;
+    margin: 10px;
 }
-
 .contact-item {
     display: flex;
-    align-items: flex-start;
     margin-bottom: 25px;
+    align-items: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: row;
     align-items: center;
 }
 
@@ -763,7 +746,7 @@ body {
 
 .contact-value {
     color: #0f0f10;
-    flex: 1;
+    flex: 1.4;
 }
 
 .social-media {
@@ -840,7 +823,7 @@ body {
 }
 
 .form-textarea {
-    min-height: 120px;
+    min-height: 200px;
     resize: vertical;
     font-family: inherit;
 }
